@@ -1,0 +1,33 @@
+@import 'reset';
+@import 'base';
+@import 'classes';
+@import 'media-queries';
+@import 'utils';
+@import 'variables';
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    grid:
+    "header" auto
+    "content" 1fr
+    "footer" auto /
+    auto
+}
+
+header {
+    grid-area: header;
+    background: green;
+    padding: 2rem;
+}
+
+.content {
+    grid-area: content;
+}
+
+footer {
+    grid-area: footer;
+    padding: 2rem;
+}
+
+
