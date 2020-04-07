@@ -17,17 +17,53 @@
 
 header {
     grid-area: header;
-    background: green;
+    background: var(--primary-dark);
     padding: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    a {
+        color: white;
+    }
+
+    .header-brand {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    ul {
+        display: flex;
+        li {
+            .header-nav {
+                font-size: 1.8rem;
+                padding: 0 10px;
+            }
+            .active {
+                text-decoration: underline;
+            }
+        }
+        
+    }
 }
 
 .content {
     grid-area: content;
+    padding: 20px;
 }
 
 footer {
     grid-area: footer;
     padding: 2rem;
+    background: var(--dark-grey);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+        font-size: 1.5rem;
+        padding: 0 5px;
+    }
 }
 
 
