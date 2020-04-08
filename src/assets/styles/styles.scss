@@ -32,18 +32,53 @@ header {
         font-size: 4rem;
         font-weight: 700;
     }
-    ul {
-        display: flex;
-        li {
-            .header-nav {
-                font-size: 1.8rem;
-                padding: 0 10px;
+    .header-menu {
+        position: relative;
+        ul {
+            display: flex;
+            @include xs {
+                display: none;
             }
-            .active {
-                text-decoration: underline;
+            li {
+                .header-nav {
+                    font-size: 1.8rem;
+                    padding: 0 10px;
+                }
+                .active {
+                    text-decoration: underline;
+                }
+            }
+            
+        }
+    }
+    .header-menu-icon {
+        display: none;
+        @include xs {
+            display: block;
+            color: white;
+            font-size: 3rem;
+        }
+    }
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        background: var(--primary-dark);
+        padding: 3rem 1.5rem;
+        top: 9rem;
+        right: 1rem;
+        border-radius: 3px;
+        box-shadow: var(--box-shadow);
+        ul {
+            li {
+                margin: 3rem 0;
+                a {
+                    color: white;
+                }
             }
         }
-        
+    }
+    .mobile-menu.open {
+        display: block;
     }
 }
 
