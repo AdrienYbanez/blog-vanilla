@@ -37,7 +37,7 @@ form.addEventListener('submit', async e => {
     Fonction qui reçoit le contenu du formulaire et vérifie si tout les champs sont remplis
 */
 const formIsValid = (article) => {
-    if (!article.author || !article.categorie || !article.content) {
+    if (!article.author || !article.categorie || !article.content || !article.title || !article.image) {
         errors.push('Vous devez renseigner tous les champs');
     } else {
         errors = [];
