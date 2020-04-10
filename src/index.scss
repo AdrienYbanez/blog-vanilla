@@ -4,11 +4,12 @@
     background: var(--divider);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 5rem;
     .articles-container {
         max-width: 800px;
-        width: 100%;
-        margin: 5rem 0 1rem 0;
+        flex: 1;
+        margin: 0 0 1rem 0;
         .article {
             background: white;
             padding: 0 5rem;
@@ -47,6 +48,30 @@
                 padding: 2rem 0;
                 border-top: 1px solid var(--divider);
                 margin-top: 2rem;
+            }
+        }
+    }
+    .sidebar {
+        flex: 0 0 250px;
+        padding: 2rem;
+        margin: 0 2rem 2rem 2rem;
+        background: white;
+        border-radius: 3px;
+        box-shadow: var(--box-shadow);
+        @include xs {
+            display: none;
+        }
+        .categories-container {
+            li {
+                margin: 1rem 0;
+                transition-duration: 0.2s;
+                &:hover {
+                    color: var(--primary);
+                    cursor: pointer;
+                    strong {
+                        color: var(--primary-dark);
+                    }
+                }
             }
         }
     }

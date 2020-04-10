@@ -24,6 +24,10 @@
                 margin-bottom: 1rem;
             }
         }
+        #errors {
+            margin: 1rem 0;
+            font-weight: 700;
+        }
         input, textarea {
             border: 1px solid var(--divider);
             padding: 1rem;
