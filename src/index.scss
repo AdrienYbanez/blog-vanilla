@@ -1,0 +1,78 @@
+@import './assets/styles/media-queries';
+
+.content {
+    background: var(--divider);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5rem;
+    .articles-container {
+        max-width: 800px;
+        flex: 1;
+        margin: 0 0 1rem 0;
+        .article {
+            background: white;
+            padding: 0 5rem;
+            margin-bottom: 5rem;
+            border-radius: 0.3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: var(--box-shadow);
+            @include xs {
+                padding: 0 2rem;
+            }
+            img {
+                height: 6rem;
+                width: 6rem;
+                border-radius: 50%;
+                margin-top: -3rem;
+            }
+            h2 {
+                margin-top: 2rem;
+                margin-bottom: 0;
+            }
+            &-author {
+                color:var(--accent);
+                font-weight: 700;
+                margin-bottom: 3rem;
+            }
+            &-content {
+                max-width: 550px;
+                white-space: pre-line;
+            }
+            &-actions {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                padding: 2rem 0;
+                border-top: 1px solid var(--divider);
+                margin-top: 2rem;
+            }
+        }
+    }
+    .sidebar {
+        flex: 0 0 250px;
+        padding: 2rem;
+        margin: 0 2rem 2rem 2rem;
+        background: white;
+        border-radius: 3px;
+        box-shadow: var(--box-shadow);
+        @include xs {
+            display: none;
+        }
+        .categories-container {
+            li {
+                margin: 1rem 0;
+                transition-duration: 0.2s;
+                &:hover {
+                    color: var(--primary);
+                    cursor: pointer;
+                    strong {
+                        color: var(--primary-dark);
+                    }
+                }
+            }
+        }
+    }
+}

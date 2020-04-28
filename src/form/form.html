@@ -3,11 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Blog Vanilla - Formulaire</title>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/22df1091ee.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <a href="./index.html">Accueil</a>
-    <img src="./assets/img/northern-forest.jpg" alt="Image de montagnes">
+    <div class="container">
+        <header>
+            <a class="header-brand" href="./index.html">Blog Vanilla</a>
+            <div class="header-menu">
+                <ul>
+                    <li>
+                        <a class="header-nav" href="./index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a class="header-nav active" href="./form.html">Créer un article</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </header>
+        <div class="content">
+            <form>
+                <h2 class="title-underline">Ajouter un article</h2>
+                <div class="form-group">
+                    <label for="author">Auteur</label>
+                    <input type="text" name="author">
+                </div>
+                <div class="form-group">
+                    <label for="image">Image de profil</label>
+                    <input type="text" name="image">
+                </div>
+                <div class="form-group">
+                    <label for="categorie">Categorie</label>
+                    <input type="text" name="categorie">
+                </div>
+                
+                <div class="form-group">
+                    <label for="title">Titre</label>
+                    <input type="text" name="title">
+                </div>
+                <div class="form-group">
+                    <label for="content">Article</label>
+                    <textarea name="content"></textarea>
+                </div>
+                <ul id='errors' class="text-error"></ul>
+                <div class="form-btn-container">
+                    <button type="button" class="btn btn-annulation">Annuler</button>
+                    <button type="submit" class="btn btn-validation">Sauvegarder</button>
+                </div>
+            </form>
+        </div>
+        <footer><i class="far fa-copyright"></i> Blog Vanilla - 2020</footer>
+    </div>
 </body>
 </html>

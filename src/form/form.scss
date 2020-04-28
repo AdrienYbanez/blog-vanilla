@@ -1,7 +1,49 @@
-a {
-    text-decoration: dotted;
-    color: turquoise;
-}
-img {
-    width: 800px;
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--divider);
+
+
+    form {
+        width: 100%;
+        padding: 4rem;
+        box-shadow: var(--box-shadow);
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        .form-group {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            label {
+                font-size: 1.8rem;
+                color: var(--accent);
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+        }
+        #errors {
+            margin: 1rem 0;
+            font-weight: 700;
+        }
+        input, textarea {
+            border: 1px solid var(--divider);
+            padding: 1rem;
+            outline: 0;
+            border-radius: 3px;
+            &:focus {
+                border-color: var(--accent);
+            }
+        }
+        textarea {
+            height: 20rem;
+        }
+        .form-btn-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
 }
